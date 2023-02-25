@@ -1,0 +1,77 @@
+@font-face {
+    font-family: "Right Grotesk";
+    src: url(./fonts/RightGrotesk-SpatialRegular.otf);
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Right Grotesk";
+}
+
+html {
+    background-color: black;
+
+    --yellow: #ffb100;
+    --purple: #967dc6;
+    --green: #00ac8f;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100svh;
+}
+
+.color-block {
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    transition: width 1s cubic-bezier(0.215, 0.610, 0.355, 1)
+}
+
+#yellow {
+    background-color: var(--yellow);
+}
+
+#green {
+    background-color: var(--green);;
+}
+
+#purple {
+    background-color: var(--purple);;
+}
+.color-container {
+    padding-left: 45%;
+    cursor: pointer;
+}
+.color-block a {    
+    /* display: none; */
+    font-size: 3rem;
+    padding-left: 0rem;
+    padding-right: 2rem;
+    padding-bottom: .5rem;
+    transition: .0s ease;
+    transition-delay: .0s;
+    opacity: 0;
+    cursor: pointer;
+    transform: translateX(3.5rem);
+    margin-left: 5rem;
+}
+
+.color-block:hover a, .color-block:focus a  {
+    display: flex;
+    opacity: 1;
+    transition: .7s ease;
+    transition-delay: .5s;
+    transform: translateX(-3.5rem);
+}   
+
+
+.color-block:hover, .color-block:focus {
+    width: 18rem;
+}
+
